@@ -11,7 +11,7 @@ const ItemSchema = new mongoose.Schema({
 });
 
 // the schema for invoice
-const InvoiceSchema = new mongoose.Schema({
+const invoiceSchema = new mongoose.Schema({
     owner: {
         type: String,
         required: true,
@@ -70,5 +70,5 @@ const InvoiceSchema = new mongoose.Schema({
     timestamps: true
 });
 
-const Invoice = mongoose.models.Invoice || mongoose.model('Invoice', InvoiceSchema);
+const Invoice = mongoose.models.Invoice || mongoose.model("Invoice", invoiceSchema);
 export default Invoice;
