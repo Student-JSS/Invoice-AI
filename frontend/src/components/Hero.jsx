@@ -137,7 +137,7 @@ const Hero = () => {
                     <div className={heroStyles.featureIcon}>{feature.icon}</div>
                     <div className={heroStyles.featureText}>
                         <div className={heroStyles.featureLabel}>{feature.label}</div>
-                        <div className={heroStyles.featureDesc}></div>
+                        <div className={heroStyles.featureDesc}>{feature.desc}</div>
                     </div>
                 </div>
 
