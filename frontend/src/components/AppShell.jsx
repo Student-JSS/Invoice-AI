@@ -433,7 +433,8 @@ const AppShell = () => {
         )}
 
         {/* main content navbar */}
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0" style={{ position:"relative", zIndex:20,
+        }}>
           <header
             className={`${appShellStyles.header} ${scrolled ? appShellStyles.headerScrolled : appShellStyles.headerNotScrolled}`}
           >

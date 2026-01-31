@@ -105,7 +105,7 @@ export async function updateBusinessProfile(req, res) {
     }
     catch(err){
 
-        console.log("Error updating business profile:", err);
+        console.error("Error updating business profile:", err);
         return res.status(500).json({ success: false, message: "Server Error" });
     }
 }
