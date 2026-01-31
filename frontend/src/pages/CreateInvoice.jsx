@@ -8,6 +8,8 @@ import {
   createInvoiceCustomStyles,
 } from "../assets/dummyStyles";
 
+
+
 /* ---------- API BASE ---------- */
 const API_BASE = "http://localhost:4000";
 
@@ -982,7 +984,7 @@ export default function CreateInvoice() {
                   }`}
                 >
                   <StatusBadge
-                    status={status.label}
+                    status={status.value}
                     size="default"
                     showIcon={true}
                   />

@@ -101,27 +101,30 @@ const StatusBadge = ({ status = "", size = "default", showIcon=true}) => { const
     large: "px-4 py-2 text-base gap-2.5",
   };
 
-  return 
-    <div className={`inline-flex items-center ${sizeClasses[size]} rounded-full font-medium ${config.bg} ${config.text} border ${config.border} transition-all duration-300 ease-out hover:scale-105 hover:shadow-sm group relative overflow-hidden`}>
+  return (
+  <div className={`inline-flex items-center ${sizeClasses[size]} rounded-full font-medium ${config.bg} ${config.text} border ${config.border} transition-all duration-300 ease-out hover:scale-105 hover:shadow-sm group relative overflow-hidden`}>
 
-      <div className={`absolute inset-0 bg-linear-to-r ${config.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+    <div className={`absolute inset-0 bg-linear-to-r ${config.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
 
-      {showIcon && (
-        <div className='relative z-1- flex items-center'>
-          <IconComponent className="w-3 h-3"/>
-        </div>
-      )}
-      <span className='relative z-10 font-semibold tracking-wide first-letter:uppercase'>
-        {s === "default" ? status : s}
-      </span>
+    {showIcon && (
+      <div className="relative z-10 flex items-center">
+        <IconComponent className="w-3 h-3" />
+      </div>
+    )}
 
-      {(s === "unpaid" || s === "overdue") && (
-        <div className='relative z-10'>
-          <div className={`w-1.5 h-1.5 rounded-full bg-current animate-pulse`}/>
-        </div>
-      )}
-      
-    </div>
+    <span className="relative z-10 font-semibold tracking-wide first-letter:uppercase">
+      {s === "default" ? status : s}
+    </span>
+
+    {(s === "unpaid" || s === "overdue") && (
+      <div className="relative z-10">
+        <div className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+      </div>
+    )}
+
+  </div>
+);
+
 };
 
 //status with count

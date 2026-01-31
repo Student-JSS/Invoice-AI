@@ -9,6 +9,7 @@ import CreateInvoice from './pages/CreateInvoice'
 import Invoices from "./pages/Invoices";
 import InvoicePreview from './components/InvoicePreview'
 import BusinessProfile from './pages/BusinessProfile.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 
 
@@ -43,6 +44,7 @@ const App = () => {
 
       <Route path="create-invoice" element={<CreateInvoice />}/>
       <Route path="business" element={<BusinessProfile />}/>
+      <Route path="*" element={<NotFound/>}/>
       
       </Route>
     </Routes>
